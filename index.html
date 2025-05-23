@@ -1,87 +1,77 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人網站</title>
-    <style>
-        body {
-            font-family: "Microsoft JhengHei", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-        }
-        header {
-            background-color: white;
-            color: black;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-  font-family: "DFKai-SB", "標楷體", serif;
-}
-        header img{
-        width:120px;
-        height:120px;
-        border-radious: 50%;
-        object-fit:contain;
-        margin-right:20px;
-        border: 2px solid white;
-}
-        .header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-        
-        nav {
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #666;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>詹幼綺個人網站</title>
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+    header {
+      background-color: white;
+      padding: 20px;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+    .info-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .name-title {
+      font-family: "DFKai-SB", "標楷體", serif;
+      font-size: 28px;
+      margin: 0 0 10px 0;
+    }
+    .nav-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .nav-vertical a {
+      font-family: "DFKai-SB", "標楷體", serif;
+      font-size: 18px;
+      text-decoration: underline;
+      color: #333;
+      text-align: left;
+    }
+    .nav-vertical a:hover {
+      color: #007acc;
+    }
+  </style>
 </head>
 <body>
-
-<header>
-  <div class="header-flex">
-    <img src="photo.jpeg" alt="個人照片">
-    <h1>詹幼綺</h1>
-  </div>
-</header>
-
-
-<nav>
-    <a href="#about">自傳</a>
-    <a href="#process">學習心得</a>
-     <a href="#modivation">動機</a>
-     <a href="#plan">讀書計劃</a>
-    <a href="#skills">技能</a>
-    <a href="#portfolio">作品集</a>
-     <a href="#score">歷年成績</a>
-
-</nav>
-
+  <header>
+    <div class="header-container">
+      <img src="photo.jpeg" alt="個人照片" class="profile-img">
+      <div class="info-block">
+        <h1 class="name-title">詹幼綺</h1>
+        <nav class="nav-vertical">
+          <a href="#about">自傳</a>
+          <a href="#process">學習心得</a>
+          <a href="#modivation">動機</a>
+          <a href="#plan">讀書計劃</a>
+          <a href="#skills">技能</a>
+          <a href="#portfolio">作品集</a>
+          <a href="#score">歷年成績</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 <section id="about">
     <h2>關於我</h2>
     <li>學歷: 屏東大學資訊工程學系一年級</li>
