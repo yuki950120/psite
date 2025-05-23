@@ -25,6 +25,12 @@
         margin-right:20px;
         border: 2px solid white;
 }
+        .header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
         
         nav {
             background-color: #444;
@@ -55,10 +61,12 @@
 <body>
 
 <header>
+  <div class="header-flex">
+    <img src="photo.jpeg" alt="個人照片">
     <h1>詹幼綺</h1>
-    <img src="photo.jpeg"> 
-    
+  </div>
 </header>
+
 
 <nav>
     <a href="#about">自傳</a>
