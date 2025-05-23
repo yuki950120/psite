@@ -17,20 +17,20 @@
     }
     .header-container {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 20px;
+      flex-wrap: wrap;
     }
     .profile-img {
       width: 120px;
       height: 120px;
-      border-radius: 50%;
       object-fit: cover;
       border: 2px solid white;
     }
     .info-block {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
     }
     .name-title {
       font-family: "DFKai-SB", "標楷體", serif;
@@ -48,9 +48,29 @@
       text-decoration: underline;
       color: #333;
       text-align: left;
+      line-height: 1.6;
     }
     .nav-vertical a:hover {
       color: #007acc;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 24px;
+      font-family: "DFKai-SB", "標楷體", serif;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    section li, section p {
+      font-size: 16px;
+      line-height: 1.8;
     }
   </style>
 </head>
