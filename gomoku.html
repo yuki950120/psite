@@ -2,44 +2,94 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-
+    <title>我的作品集</title>
     <style>
         body {
             font-family: "Microsoft JhengHei", sans-serif;
             margin: 40px;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #f5f5f5;
         }
 
         h1 {
-            color: #222;
+            color: #333;
         }
 
-        .download-link {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #3366cc;
-            color: white;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 250px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox overlay */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px white;
+            border-radius: 8px;
+        }
+
+        a {
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 16px;
-            margin-top: 20px;
+            color: #3366cc;
         }
 
-        .download-link:hover {
-            background-color: #254a91;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <h1>進位選擇加法器</h1>
-  
+    <h1>作品集</h1>
 
-    <a href="" download class="download-link">📄 adder.PDF</a>
+    <div class="gallery">
+        <img src="gomoku.jpg" alt="作品1" onclick="openLightbox(this)">
+        <img src="gomo.jpg" alt="作品2" onclick="openLightbox(this)">
+       
+    </div>
 
-    <br><br>
-    <a href="collection.html">← 回作品集</a>
+    <br>
+    <a href="about.html">← 個人網站</a>
 
+    <!-- Lightbox container -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="放大圖片">
+    </div>
+
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
